@@ -1,5 +1,7 @@
 class TriangleError < StandardError
-  # triangle error code
+  def initialize(msg="My default message")
+    super
+  end
 end
 
 class Triangle
