@@ -10,7 +10,7 @@ class Triangle
       raise TriangleError
     elsif (@side1+@side2 <= @side3) || (@side1+@side3 <= @side2) || (@side2+@side3 <= @side1)
       raise TriangleError
-    elsif @side1 == nil || @side2 == nil || @side3 == nil
+    elsif (@side1 + @side2 == nil || @side3 == nil
       raise TriangleError
     else
       if (@side1 == @side2) && (@side2 == @side3)
