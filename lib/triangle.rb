@@ -1,8 +1,4 @@
-class TriangleError < StandardError
-  def initialize(msg="My default message")
-    super
-  end
-end
+
 
 class Triangle
   def initialize(side1,side2,side3)
@@ -10,7 +6,11 @@ class Triangle
     @side2 = side2
     @side3 = side3
   end
-
+  class TriangleError < StandardError
+    def initialize(msg="My default message")
+      super
+    end
+  end
   def kind
     if (@side1 == 0) || (@side2 == 0) || (@side3 == 0)
       raise TriangleError, ""
